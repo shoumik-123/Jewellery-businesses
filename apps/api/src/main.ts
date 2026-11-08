@@ -4,6 +4,9 @@ import { NestFactory } from '@nestjs/core';
 import helmet from 'helmet';
 import { AppModule } from './app.module.js';
 import { ENV, type Env } from './core/config/env.js';
+import { Reflector } from '@nestjs/core';
+import { AuthGuard } from './core/auth/auth.guard.js';
+import { AuthContextService } from './core/auth/auth-context.service.js';
 import { AllExceptionsFilter } from './core/http/all-exceptions.filter.js';
 import { loadDotenv } from './core/config/load-dotenv.js';
 
@@ -35,6 +38,10 @@ async function bootstrap(): Promise<void> {
   // ZodQueryPipe and @jh/shared/schemas), so class-validator decorators are
   // not part of the stack and a DTO class would be a second, divergent source
   // of truth about what a request may contain.
+  // Global, so a route is protected unless it says `@Public()`. Opt-out
+  // rather than opt-in: forgetting the decorator then breaks the endpoint
+  // loudly instead of publishing it quietly.
+  app.useGlobalGuards(new AuthGuard(app.get(Reflector), app.get(AuthContextService)));
   app.useGlobalFilters(new AllExceptionsFilter());
   app.enableShutdownHooks();
 

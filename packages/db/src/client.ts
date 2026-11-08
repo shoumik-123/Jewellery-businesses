@@ -49,6 +49,23 @@ export interface TenantScope {
 
 export interface CreateClientOptions {
   connectionString: string;
+  /**
+   * Issue `SET LOCAL ROLE` per transaction. Defaults to true, and must stay
+   * true everywhere that matters.
+   *
+   * The only reason this switch exists: the local WebAssembly development
+   * server (`pnpm db:up`) terminates its backend on any UPDATE executed under
+   * a non-owner role, which makes sign-in - and anything else that writes -
+   * impossible there. Turning it off trades the database-level half of tenant
+   * isolation for a usable local environment.
+   *
+   * With it off, queries run as the connection's own role. If that role owns
+   * the schema or is a superuser, row-level security no longer applies and
+   * only the application's own `where` clauses separate tenants. The API
+   * refuses to start with this off outside development, and says so loudly on
+   * every boot where it is off. See docs/03-multi-tenancy.md section 11.
+   */
+  roleSwitching?: boolean;
   /** Max pool connections for this process. */
   maxConnections?: number;
   /** Statement timeout applied to every connection, in milliseconds. */
@@ -184,7 +201,9 @@ export function createDatabase(options: CreateClientOptions): Database {
 
     try {
       return await prisma.$transaction(async (tx) => {
-        await tx.$executeRawUnsafe(`SET LOCAL ROLE ${DB_ROLES[mode]}`);
+        if (options.roleSwitching !== false) {
+          await tx.$executeRawUnsafe(`SET LOCAL ROLE ${DB_ROLES[mode]}`);
+        }
 
         if (options.statementTimeoutMs !== undefined) {
           await tx.$executeRawUnsafe(`SET LOCAL statement_timeout = ${options.statementTimeoutMs}`);

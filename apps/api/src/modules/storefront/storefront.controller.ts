@@ -1,4 +1,5 @@
 import { Controller, Get, Header, Param, Query, UseGuards } from '@nestjs/common';
+import { Public } from '../../core/auth/decorators.js';
 import { CurrentStore, StorefrontStoreGuard } from '../../core/tenancy/storefront-store.guard.js';
 import type { ResolvedStore } from '../../core/tenancy/store-resolver.service.js';
 import { ZodQueryPipe } from '../../core/http/zod-query.pipe.js';
@@ -11,6 +12,7 @@ import { StorefrontService } from './storefront.service.js';
  * guard, not by anything in the path.
  */
 @Controller('storefront')
+@Public()
 @UseGuards(StorefrontStoreGuard)
 export class StorefrontController {
   constructor(private readonly storefront: StorefrontService) {}

@@ -35,6 +35,20 @@ interface RequestOptions {
   query?: Record<string, string | number | undefined>;
 }
 
+/**
+ * The cache tag every storefront read for one shop carries.
+ *
+ * The timer alone is not enough. A shop owner who edits a price and then looks
+ * at their own storefront has to see the new one; waiting out a revalidation
+ * window looks exactly like the save having failed, and the obvious reaction
+ * is to save again. So writes from the dashboard drop this tag
+ * (`revalidateStore`), and the timer is only a backstop for changes that did
+ * not come through this app - a seed script, or a direct database edit.
+ */
+export function storeCacheTag(storeSlug: string): string {
+  return `store:${storeSlug}`;
+}
+
 export async function apiGet<T>(path: string, options: RequestOptions = {}): Promise<T> {
   const url = new URL(`${API_BASE_URL}${path}`);
   for (const [key, value] of Object.entries(options.query ?? {})) {
@@ -46,7 +60,13 @@ export async function apiGet<T>(path: string, options: RequestOptions = {}): Pro
 
   const response = await fetch(url, {
     headers,
-    next: { revalidate: options.revalidate ?? 30 },
+    next: {
+      revalidate: options.revalidate ?? 30,
+      // Tagged by shop, not by endpoint, because one edit can change several
+      // pages: a price shows on the product, the listing and the home rails.
+      // Listing each one would mean remembering to add the next.
+      ...(options.storeSlug ? { tags: [storeCacheTag(options.storeSlug)] } : {}),
+    },
   });
 
   if (!response.ok) {

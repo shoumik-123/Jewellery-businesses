@@ -20,6 +20,34 @@ every later phase builds on, and shortcuts there are paid for repeatedly.
 > the dashboard remain where this roadmap puts them. Phase 2 is unchanged and
 > is next.
 
+> **Note, 8 November 2026 — what is actually built, against this plan.**
+> Phases 0–3 are complete and verified: `pnpm db:verify-rls` reports 33/33
+> isolation checks passing, and `pnpm test` runs 126 tests.
+>
+> Of **Phase 4**, store provisioning is built — a Super Admin creates each shop
+> with its owner and a one-time password, in one transaction. Plans, pricing
+> and entitlement enforcement are not.
+>
+> Of **Phase 5**, the dashboard shell is built: a shop's own pages, resolved
+> from its slug against the caller's memberships. Staff invites are not, because
+> they need an email service.
+>
+> Of **Phase 6**, the first slice is built: a shop can list, search, filter,
+> create, edit and archive its own products with the full jewellery field set
+> (metal, purity, gross and net weight, hallmark, stones, making charge,
+> wastage, VAT). Variants and sizes, gemstone rows, category and brand editing,
+> and metal-rate-driven recalculation are not.
+>
+> **Phase 7 (inventory)** is untouched.
+>
+> Two gaps are credential-shaped rather than unfinished work. **Image upload**
+> needs Cloudinary or S3; until one is configured the product editor accepts
+> image addresses (`https://…`, or a path inside `apps/web/public`) and
+> `catalogueMeta.mediaUploadEnabled` is `false`, which is what the UI reads to
+> decide what to offer. **Password reset and staff invites** need an email
+> service; `pnpm user:set-password` is the interim path. Neither has a stub
+> that pretends to work.
+
 ## Milestone map
 
 ```mermaid

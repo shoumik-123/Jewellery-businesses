@@ -29,6 +29,8 @@
     "db:deploy": "prisma migrate deploy",
     "db:reset": "prisma migrate reset --force",
     "db:studio": "prisma studio",
+    "db:grants": "tsx prisma/dev-grants.ts",
+    "user:set-password": "tsx prisma/set-password.ts",
     "db:seed": "tsx prisma/seed.ts",
     "media:generate": "tsx scripts/generate-demo-media.ts",
     "db:rls": "tsx prisma/rls/generate.ts",

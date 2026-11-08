@@ -6,8 +6,9 @@ subscription billing — without writing code.
 
 **বাংলায় সম্পূর্ণ নির্দেশিকা: [README.bn.md](README.bn.md) · পেজ তালিকা: [PAGES.bn.md](PAGES.bn.md)**
 
-**Status: Phase 0 (scaffold), Phase 1 (database) and a working storefront
-slice (API + web) complete and verified. Phase 2 (authentication) is next.**
+**Status: scaffold, database, storefront, authentication and RBAC are complete
+and verified. A shop can now manage its own catalogue from its dashboard —
+add, edit and archive products. Variants, stock and orders are next.**
 
 | Phase | What                                                                             | State |
 | ----- | -------------------------------------------------------------------------------- | ----- |
@@ -15,11 +16,13 @@ slice (API + web) complete and verified. Phase 2 (authentication) is next.**
 | 0     | Monorepo, toolchain, lint/format/typecheck, CI, shared packages                  | done  |
 | 1     | Schema, migrations, constraints, search, row-level security, seed                | done  |
 | 1.5   | Storefront slice: NestJS API, Next.js shop, host-based tenant routing            | done  |
-| 2     | Authentication, sessions, RBAC                                                   | next  |
-| 3     | Multi-tenancy wiring in the API (guards, context, scoped client)                 | after |
+| 2     | Authentication, sessions, RBAC                                                   | done  |
+| 3     | Multi-tenancy wiring in the API (guards, context, scoped client)                 | done  |
+| 4     | Shop dashboard: product list, create, edit, archive                              | done  |
+| 4     | Variants and sizes, stock per location, category and brand editing               | next  |
 
-85 unit tests pass; 29 of 32 live tenant-isolation checks pass locally and all
-32 run in CI against real PostgreSQL. Two storefronts render from real rows at
+103 unit tests pass and all 33 live tenant-isolation checks pass locally
+against PostgreSQL 18. Two storefronts render from real rows at
 `localhost:3000`. See **Verified so far** below.
 
 ---
@@ -28,15 +31,18 @@ slice (API + web) complete and verified. Phase 2 (authentication) is next.**
 
 ```bash
 pnpm install          # pnpm 12+, Node 22+
-pnpm db:up            # starts a local Postgres (WASM; no Docker needed)
-pnpm db:status        # prints its ports — stable per server name, so this is
-                      # a one-time step, not something to redo each session
-cp .env.example .env  # then set DATABASE_URL / DIRECT_DATABASE_URL
+# PostgreSQL 17 or 18, listening on 127.0.0.1:5432
+createdb jewelleryhub           # or: CREATE DATABASE jewelleryhub;
+cp .env.example .env            # set DATABASE_URL / DIRECT_DATABASE_URL
 pnpm db:generate      # generate the Prisma client
-pnpm db:deploy        # apply both migrations
-pnpm db:seed          # permissions, roles, plans, themes, admin, demo stores
+pnpm db:deploy        # 88 tables, constraints, search, RLS policies, roles
+pnpm media:generate   # demo catalogue imagery
+pnpm db:seed          # reference data, admin, and the two demo stores
 pnpm dev              # API on :4000, storefront on :3000
 ```
+
+The migration creates the `app_runtime`, `app_identity` and `app_platform`
+roles itself, so a plain superuser connection string is all `.env` needs.
 
 Then open **http://localhost:3000** and pick a store.
 
@@ -49,11 +55,9 @@ Then open **http://localhost:3000** and pick a store.
 | API                    | http://localhost:4000/v1/health/ready   |
 | Browse the raw data    | `pnpm db:studio`                        |
 
-Housekeeping: the dev server keeps a change-log beside the data, and it grows
-with every migrate and seed — it reached 984 MB here before being reset.
-`pnpm db:destroy` removes the server and all of it; `pnpm db:deploy && pnpm
-db:seed` rebuilds in under a minute, and the ports stay the same so `.env`
-does not need touching.
+`pnpm db:up` still starts a no-install WebAssembly Postgres as a fallback, but
+it cannot run sign-in: it terminates on any UPDATE issued under a non-owner
+role. Real PostgreSQL is the supported local database.
 
 Browsers resolve `*.localhost` to 127.0.0.1 with no hosts-file entry, so the
 subdomain form — which is how stores are addressed in production — works
@@ -83,7 +87,7 @@ Not claims — commands you can run:
 | ----------------------------- | -------------------------------------------------- | ------------------------------------------------- |
 | Schema is valid               | `pnpm exec prisma validate`                        | 88 models, 47 enums                               |
 | Migrations apply from empty   | `pnpm db:deploy`                                   | 88 tables, 190 indexes, 150 FKs, 47 enum types    |
-| Tenant isolation, live        | `pnpm db:verify-rls`                               | 29/32 pass, 3 skipped on the WASM dev server      |
+| Tenant isolation, live        | `pnpm db:verify-rls`                               | 33/33 pass on PostgreSQL 18                       |
 | RLS covers every tenant table | included above                                     | 75 protected, 13 exempt by documented decision    |
 | RLS policies match the schema | `pnpm db:rls -- --check`                           | in sync                                           |
 | Money arithmetic              | `pnpm test`                                        | 47 tests incl. half-up rounding, exact allocation |
@@ -146,6 +150,22 @@ www.brand.com               custom domains, verified + auto-TLS
   from the admin console without a migration; limits are enforced in a guard at
   the point of mutation, inside the same transaction as the insert.
 
+## Who can create an account
+
+Decided 8 November 2026, and built this way:
+
+- **No public sign-up.** There is no registration endpoint and no signup page.
+  The absence is the design, not an omission.
+- **A Super Admin creates each shop** from the admin console, which also
+  creates the owner's account and a one-time password in the same
+  transaction.
+- **Shop owners and staff sign in** at `/login`.
+- **Customers only browse.** The storefront needs no account.
+
+This removes a whole class of exposure — credential stuffing against a public
+registration form, fake-shop spam, and email-verification abuse — and it is
+why `POST /v1/auth/register` does not exist.
+
 ## Decisions I still need from you
 
 Five decisions change the work materially. My recommendation is first in each
@@ -205,9 +225,12 @@ prisma/
 docs/            the planning set, updated as the code changed it
 apps/
   api/         NestJS: config, database boundary, store resolver,
-               public storefront + directory endpoints          [running]
+               public storefront + directory, auth and sessions,
+               platform admin, shop catalogue management        [running]
   web/         Next.js: store directory, storefront home, catalogue
-               with filters and sorting, product detail         [running]
+               with filters and sorting, product detail, login,
+               shop dashboard with the product editor,
+               super-admin console                              [running]
   worker/      queues and cron                                  [Phase 6]
 e2e/             Playwright suites + k6 load scripts            [Phase 8+]
 ```
@@ -220,17 +243,17 @@ after implementing, I give you the commands to run it, what you should see, and
 how it fits what already exists. No phase ships with mock data standing in for
 real functionality, and no phase closes with a known failing test.
 
-**Next step:** Phase 2 — authentication and RBAC, then Phase 3 wires the
-tenancy guards onto the access modes that `packages/db` already provides and
-`pnpm db:verify-rls` already proves.
+**Next step:** the rest of Phase 4 — variants and sizes (one ring in sizes 16,
+18 and 20, each with its own SKU and price), stock per location, and editing
+categories and brands rather than only choosing from the seeded ones.
 
-Two things need your input before they can be finished properly:
+Three things still need your input or your credentials:
 
 1. **Plan prices and limits** are seeded from the proposal below. Change them
    in `prisma/seed.ts` (or later from the admin console — they are data).
-2. **A real local PostgreSQL** would let all 32 isolation checks run on your
-   machine rather than 29. Installing it needed permission the sandbox denied,
-   so either install Docker Desktop and run `docker compose up -d postgres`, or
-   grant that permission and I will set up a no-admin local server.
-#   J e w e l l e r y - b u s i n e s s e s  
- 
+2. **Image uploads** need a Cloudinary or S3 account. Until one is configured
+   the product editor takes image addresses, which is real functionality; an
+   upload button that stored nothing would not be. See `docs/08-roadmap.md`.
+3. **Password reset and staff invites** need an email service. Until one is
+   configured, reset a password with
+   `NEW_PASSWORD='…' pnpm user:set-password someone@example.com`.

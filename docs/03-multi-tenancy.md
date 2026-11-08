@@ -393,6 +393,13 @@ CHECK constraints, roles and every RLS policy. Two limitations matter:
    ("Could not load schema metadata"). Restarting the client reconnects; the
    data is untouched.
 
-So: the dev server is fine for schema and feature work, and **CI against real
-PostgreSQL is the authority** on isolation. For full local fidelity, run
-`docker compose up -d postgres` and point `DATABASE_URL` at it instead.
+A fourth limitation was found on 8 November 2026 and is the decisive one:
+**it terminates on any UPDATE executed under a non-owner role**, not only one
+that RLS filters to zero rows. That makes sign-in impossible there, because
+recording a failed-login count is an UPDATE. Disabling the change-log trigger
+and making it SECURITY DEFINER were both tried; neither helped.
+
+So the dev server is now a fallback for schema work only. **Install
+PostgreSQL 17 or 18 locally** (or `docker compose up -d postgres`) and point
+`DATABASE_URL` at it. On real PostgreSQL every check runs: `pnpm db:verify-rls`
+reports **33/33 passed**, with nothing skipped.

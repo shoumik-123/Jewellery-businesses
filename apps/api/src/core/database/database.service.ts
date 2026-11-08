@@ -17,11 +17,26 @@ export class DatabaseService implements OnModuleDestroy {
   private readonly db: Database;
 
   constructor(@Inject(ENV) env: Env) {
+    if (!env.DB_ROLE_SWITCHING) {
+      if (env.NODE_ENV === 'production') {
+        throw new Error(
+          'DB_ROLE_SWITCHING=false is a local development workaround and is refused in production. ' +
+            'It disables the database-level half of tenant isolation.',
+        );
+      }
+      this.logger.warn(
+        'DB_ROLE_SWITCHING=false — SET LOCAL ROLE is disabled. Row-level security is NOT ' +
+          'enforcing tenant isolation in this process; only application filters are. ' +
+          'Use real PostgreSQL (docker compose up -d postgres) before trusting an isolation result.',
+      );
+    }
+
     this.db = createDatabase({
       connectionString: env.DATABASE_URL,
       maxConnections: env.DATABASE_POOL_MAX,
       statementTimeoutMs: env.DATABASE_STATEMENT_TIMEOUT_MS,
       log: env.PRISMA_LOG_QUERIES,
+      roleSwitching: env.DB_ROLE_SWITCHING,
       ...(env.DATABASE_SSL ? { ssl: { rejectUnauthorized: true } } : {}),
     });
   }

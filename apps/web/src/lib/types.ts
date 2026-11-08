@@ -135,3 +135,109 @@ export interface StoreDirectoryEntry {
   city: string | null;
   currencySymbol: string;
 }
+
+// ---------------------------------------------------------------------------
+// Dashboard (a shop managing its own catalogue)
+//
+// Separate from the storefront shapes above, and that separation is the point:
+// these include `costPrice`, which is the shop's margin and must never appear
+// in a public response. Two type names means a storefront component cannot
+// accidentally be handed a shape that carries one.
+// ---------------------------------------------------------------------------
+
+export interface ProductRow {
+  id: string;
+  slug: string;
+  name: string;
+  sku: string;
+  status: string;
+  availability: string;
+  jewelleryType: string;
+  metalType: string;
+  metalPurity: string | null;
+  price: string | null;
+  salePrice: string | null;
+  netWeightG: string | null;
+  isFeatured: boolean;
+  variantCount: number;
+  primaryImage: string | null;
+  categoryName: string | null;
+  updatedAt: string;
+  archived: boolean;
+}
+
+export interface ProductEdit {
+  id: string;
+  slug: string;
+  name: string;
+  sku: string;
+  barcode: string | null;
+  status: string;
+  availability: string;
+  shortDescription: string | null;
+  description: string | null;
+
+  jewelleryType: string;
+  metalType: string;
+  metalPurity: string | null;
+  material: string | null;
+  hallmarked: boolean;
+  hallmarkNumber: string | null;
+  certificateUrl: string | null;
+  grossWeightG: string | null;
+  netWeightG: string | null;
+  stoneWeightCt: string | null;
+  stoneType: string | null;
+  countryOfOrigin: string | null;
+  careInstructions: string | null;
+  isCustomisable: boolean;
+  isCouplePair: boolean;
+
+  pricingMode: string;
+  /** The shop's own purchase price. Dashboard only — never on the storefront. */
+  costPrice: string | null;
+  price: string | null;
+  salePrice: string | null;
+  saleStartsAt: string | null;
+  saleEndsAt: string | null;
+  makingCharge: string | null;
+  makingChargeType: string;
+  wastagePercent: string | null;
+  taxable: boolean;
+  taxRate: string | null;
+
+  isFeatured: boolean;
+  isNewArrival: boolean;
+  requiresShipping: boolean;
+  shipWeightG: string | null;
+  seoTitle: string | null;
+  seoDesc: string | null;
+  tags: string[];
+
+  primaryCategoryId: string | null;
+  brandId: string | null;
+  media: { id: string; url: string; altText: string | null; isPrimary: boolean }[];
+
+  variantCount: number;
+  archived: boolean;
+  publishedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CatalogueMeta {
+  store: { id: string; slug: string; name: string; currency: string; currencySymbol: string };
+  categories: { id: string; name: string; parentName: string | null }[];
+  brands: { id: string; name: string }[];
+  counts: { total: number; active: number; draft: number; archived: number };
+  options: {
+    status: string[];
+    availability: string[];
+    jewelleryType: string[];
+    metalType: string[];
+    pricingMode: string[];
+    makingChargeType: string[];
+  };
+  purities: Record<string, { code: string; label: string }[]>;
+  mediaUploadEnabled: boolean;
+}

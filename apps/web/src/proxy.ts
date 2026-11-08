@@ -31,9 +31,13 @@ function storeSlugFromHost(host: string | null): string | null {
   return label;
 }
 
+/** Paths that belong to the platform, never to a store subdomain. */
+const PLATFORM_PATHS = ['/login', '/dashboard', '/admin', '/api/'];
+
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (pathname.startsWith('/s/')) return NextResponse.next();
+  if (PLATFORM_PATHS.some((prefix) => pathname.startsWith(prefix))) return NextResponse.next();
 
   const slug = storeSlugFromHost(request.headers.get('host'));
   if (!slug) return NextResponse.next();

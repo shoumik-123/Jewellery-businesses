@@ -51,6 +51,23 @@ const envSchema = z.object({
    * store. Used to turn a Host header into a store slug.
    */
   ROOT_DOMAIN: z.string().default('localhost:3000'),
+
+  /**
+   * Set to 'false' ONLY on the local WebAssembly database, which crashes on
+   * any UPDATE run under a non-owner role. Doing so disables the
+   * database-level half of tenant isolation; boot refuses it in production.
+   */
+  DB_ROLE_SWITCHING: z
+    .enum(['true', 'false'])
+    .default('true')
+    .transform((value) => value !== 'false'),
+
+  /** How long a session lives before it must be rotated or re-established. */
+  SESSION_TTL_DAYS: z.coerce.number().int().positive().max(365).default(7),
+  /** Consecutive failures before an account locks. */
+  LOGIN_MAX_ATTEMPTS: z.coerce.number().int().positive().max(50).default(10),
+  /** How long that lock lasts. It expires on its own; nothing unlocks it. */
+  LOGIN_LOCKOUT_MINUTES: z.coerce.number().int().positive().max(1440).default(15),
 });
 
 export type Env = z.infer<typeof envSchema>;

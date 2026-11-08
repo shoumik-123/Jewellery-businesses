@@ -258,6 +258,9 @@ importers:
       '@swc/core':
         specifier: ^1.16.22
         version: 1.16.22(@swc/helpers@0.5.23)
+      '@swc/jest':
+        specifier: ^0.2.39
+        version: 0.2.39(@swc/core@1.16.22(@swc/helpers@0.5.23))
       '@types/express':
         specifier: ^5.0.5
         version: 5.0.6

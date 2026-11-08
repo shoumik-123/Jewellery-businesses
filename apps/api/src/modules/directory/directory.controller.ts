@@ -1,5 +1,6 @@
 import { Controller, Get, Header } from '@nestjs/common';
 import { StoreStatus } from '@jh/db';
+import { Public } from '../../core/auth/decorators.js';
 import { DatabaseService } from '../../core/database/database.service.js';
 
 export interface StoreDirectoryEntry {
@@ -20,6 +21,7 @@ export interface StoreDirectoryEntry {
  * appear, so a draft or suspended store is not disclosed.
  */
 @Controller('stores')
+@Public()
 export class DirectoryController {
   constructor(private readonly db: DatabaseService) {}
 

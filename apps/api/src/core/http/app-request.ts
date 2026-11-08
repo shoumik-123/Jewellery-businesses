@@ -1,4 +1,5 @@
 import type { Request } from 'express';
+import type { Principal, StoreMembership } from '../auth/principal.js';
 import type { ResolvedStore } from '../tenancy/store-resolver.service.js';
 
 /**
@@ -15,4 +16,12 @@ export interface AppRequest extends Request {
   id?: string;
   /** Set by StorefrontStoreGuard. Never assigned from user input directly. */
   store?: ResolvedStore;
+  /** Set by AuthGuard. Absent on @Public() routes. */
+  principal?: Principal;
+  /**
+   * Set by StorePermissionGuard: the caller's membership of the store in the
+   * route. Its presence is the proof the permission check ran, which is why a
+   * handler reads the store from here and never from `req.params.storeId`.
+   */
+  membership?: StoreMembership;
 }
