@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="A pair of silver anklets with small hanging charms">
+  <title>A pair of silver anklets with small hanging charms</title>
+  <defs>
+    <radialGradient id="bg-silver-anklet-pair-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#F6F8F9"/>
+      <stop offset="100%" stop-color="#E2E8EC"/>
+    </radialGradient>
+    <linearGradient id="metal-silver-anklet-pair-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FDFEFE"/>
+      <stop offset="42%" stop-color="#BEC7CE"/>
+      <stop offset="100%" stop-color="#7E8B95"/>
+    </linearGradient>
+    <linearGradient id="stone-silver-anklet-pair-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3F9"/>
+      <stop offset="100%" stop-color="#AFC6D8"/>
+    </linearGradient>
+    <radialGradient id="shadow-silver-anklet-pair-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7E8B95" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7E8B95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-silver-anklet-pair-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="860" rx="300" ry="51" fill="url(#shadow-silver-anklet-pair-detail)"/>
+  <ellipse cx="500" cy="340" rx="300" ry="96" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="500" cy="610" rx="300" ry="96" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 215 320 A 300 96 0 0 1 430 236" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="7" stroke-linecap="round"/>
+  <g><path d="M 215 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="215" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 215 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="215" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 310 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="310" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 310 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="310" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 405 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="405" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 405 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="405" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 500 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="500" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 500 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="500" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 595 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="595" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 595 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="595" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 690 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="690" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 690 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="690" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 785 430 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="785" cy="482" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g><g><path d="M 785 700 l 0 34" fill="none" stroke="url(#metal-silver-anklet-pair-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="785" cy="752" r="17" fill="url(#metal-silver-anklet-pair-detail)"/></g>
+  </g>
+</svg>

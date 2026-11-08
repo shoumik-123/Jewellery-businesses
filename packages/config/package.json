@@ -1,0 +1,27 @@
+{
+  "name": "@jh/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./eslint": "./eslint.base.js",
+    "./eslint-nest": "./eslint.nest.js",
+    "./eslint-next": "./eslint.next.js",
+    "./tsconfig-node": "./tsconfig.node.json",
+    "./tsconfig-lib": "./tsconfig.lib.json"
+  },
+  "files": [
+    "eslint.base.js",
+    "eslint.nest.js",
+    "eslint.next.js",
+    "tsconfig.*.json"
+  ],
+  "dependencies": {
+    "@eslint/js": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "typescript-eslint": "^8.72.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "@next/eslint-plugin-next": "^16.4.5"
+  }
+}

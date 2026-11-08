@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="A pair of 22K gold couple rings, one set with a small stone">
+  <title>A pair of 22K gold couple rings, one set with a small stone</title>
+  <defs>
+    <radialGradient id="bg-22k-gold-couple-rings-pair-full" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-22k-gold-couple-rings-pair-full" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-22k-gold-couple-rings-pair-full" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-22k-gold-couple-rings-pair-full" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-22k-gold-couple-rings-pair-full)"/>
+  <g>
+  <ellipse cx="500" cy="810" rx="300" ry="51" fill="url(#shadow-22k-gold-couple-rings-pair-full)"/>
+  <circle cx="390" cy="560" r="180" fill="none" stroke="url(#metal-22k-gold-couple-rings-pair-full)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="625" cy="620" r="150" fill="none" stroke="url(#metal-22k-gold-couple-rings-pair-full)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 262 432 A 180 180 0 0 1 368 381" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 521 514 A 150 150 0 0 1 609 471" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+  
+    <g>
+      <circle cx="625" cy="470" r="26" fill="url(#stone-22k-gold-couple-rings-pair-full)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="617.2" cy="460.9" rx="8.32" ry="5.72" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+</svg>

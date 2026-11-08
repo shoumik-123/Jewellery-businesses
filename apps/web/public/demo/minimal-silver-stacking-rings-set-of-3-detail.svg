@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="Three slim silver stacking rings">
+  <title>Three slim silver stacking rings</title>
+  <defs>
+    <radialGradient id="bg-minimal-silver-stacking-rings-set-of-3-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#F6F8F9"/>
+      <stop offset="100%" stop-color="#E2E8EC"/>
+    </radialGradient>
+    <linearGradient id="metal-minimal-silver-stacking-rings-set-of-3-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FDFEFE"/>
+      <stop offset="42%" stop-color="#BEC7CE"/>
+      <stop offset="100%" stop-color="#7E8B95"/>
+    </linearGradient>
+    <linearGradient id="stone-minimal-silver-stacking-rings-set-of-3-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3F9"/>
+      <stop offset="100%" stop-color="#AFC6D8"/>
+    </linearGradient>
+    <radialGradient id="shadow-minimal-silver-stacking-rings-set-of-3-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7E8B95" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7E8B95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-minimal-silver-stacking-rings-set-of-3-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="830" rx="260" ry="44" fill="url(#shadow-minimal-silver-stacking-rings-set-of-3-detail)"/>
+  <ellipse cx="500" cy="400" rx="195" ry="60" fill="none" stroke="url(#metal-minimal-silver-stacking-rings-set-of-3-detail)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="500" cy="520" rx="205" ry="63" fill="none" stroke="url(#metal-minimal-silver-stacking-rings-set-of-3-detail)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="500" cy="645" rx="190" ry="58" fill="none" stroke="url(#metal-minimal-silver-stacking-rings-set-of-3-detail)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 330 380 A 195 60 0 0 1 470 345" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 318 500 A 205 63 0 0 1 468 462" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Aurum Jewellers">
+  <title>Aurum Jewellers</title>
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="55%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#lg)" stroke-width="8"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#9A763A" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="100" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="76" fill="url(#lg)">AJ</text>
+</svg>

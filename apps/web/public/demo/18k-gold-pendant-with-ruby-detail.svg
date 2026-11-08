@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="An 18K gold pendant set with a ruby, on a fine chain">
+  <title>An 18K gold pendant set with a ruby, on a fine chain</title>
+  <defs>
+    <radialGradient id="bg-18k-gold-pendant-with-ruby-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-18k-gold-pendant-with-ruby-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-18k-gold-pendant-with-ruby-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-18k-gold-pendant-with-ruby-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-18k-gold-pendant-with-ruby-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="860" rx="230" ry="39" fill="url(#shadow-18k-gold-pendant-with-ruby-detail)"/>
+  <path d="M 268 215 Q 500 640 732 215" fill="none" stroke="url(#metal-18k-gold-pendant-with-ruby-detail)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 268 215 Q 500 640 732 215" fill="none" stroke="#FBEFD2" stroke-opacity="0.55"
+        stroke-width="13" stroke-dasharray="3 20" stroke-linecap="round"/>
+  <circle cx="500" cy="548" r="34" fill="none" stroke="url(#metal-18k-gold-pendant-with-ruby-detail)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 582 L 614 700 L 500 818 L 386 700 Z" fill="url(#metal-18k-gold-pendant-with-ruby-detail)"
+        stroke="#FBEFD2" stroke-opacity="0.5" stroke-width="4"/>
+  
+    <g>
+      <circle cx="500" cy="700" r="54" fill="url(#stone-18k-gold-pendant-with-ruby-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="483.8" cy="681.1" rx="17.28" ry="11.88" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+</svg>

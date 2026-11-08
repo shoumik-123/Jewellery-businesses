@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="A 21K gold bridal set: necklace with matching drop earrings">
+  <title>A 21K gold bridal set: necklace with matching drop earrings</title>
+  <defs>
+    <radialGradient id="bg-21k-gold-bridal-necklace-set-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-21k-gold-bridal-necklace-set-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-21k-gold-bridal-necklace-set-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-21k-gold-bridal-necklace-set-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-21k-gold-bridal-necklace-set-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="880" rx="320" ry="54" fill="url(#shadow-21k-gold-bridal-necklace-set-detail)"/>
+  <path d="M 230 215 Q 500 740 770 215" fill="none" stroke="url(#metal-21k-gold-bridal-necklace-set-detail)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 230 215 Q 500 740 770 215" fill="none" stroke="#FBEFD2" stroke-opacity="0.55"
+        stroke-width="17" stroke-dasharray="3 24" stroke-linecap="round"/>
+  
+    <g>
+      <polygon points="414,594.9 457,539 543,539 586,594.9 500,723.9"
+               fill="url(#stone-21k-gold-bridal-necklace-set-detail)" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="3"/>
+      <polygon points="457,539 543,539 500,594.9"
+               fill="#FFFFFF" fill-opacity="0.45"/>
+      <polygon points="414,594.9 500,594.9 500,723.9"
+               fill="#000000" fill-opacity="0.06"/>
+    </g>
+  
+    <g>
+      <circle cx="372" cy="556" r="27" fill="url(#stone-21k-gold-bridal-necklace-set-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="363.9" cy="546.55" rx="8.64" ry="5.94" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  
+    <g>
+      <circle cx="628" cy="556" r="27" fill="url(#stone-21k-gold-bridal-necklace-set-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="619.9" cy="546.55" rx="8.64" ry="5.94" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  <g>
+    <path d="M 250 790 l 0 -46" fill="none" stroke="url(#metal-21k-gold-bridal-necklace-set-detail)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="250" cy="820" r="48" fill="none" stroke="url(#metal-21k-gold-bridal-necklace-set-detail)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <g>
+      <circle cx="250" cy="820" r="18" fill="url(#stone-21k-gold-bridal-necklace-set-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="244.6" cy="813.7" rx="5.76" ry="3.96" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+  <g>
+    <path d="M 750 790 l 0 -46" fill="none" stroke="url(#metal-21k-gold-bridal-necklace-set-detail)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="750" cy="820" r="48" fill="none" stroke="url(#metal-21k-gold-bridal-necklace-set-detail)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <g>
+      <circle cx="750" cy="820" r="18" fill="url(#stone-21k-gold-bridal-necklace-set-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="744.6" cy="813.7" rx="5.76" ry="3.96" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+  </g>
+</svg>

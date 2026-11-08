@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="A silver chain with a moonstone set in a drop pendant">
+  <title>A silver chain with a moonstone set in a drop pendant</title>
+  <defs>
+    <radialGradient id="bg-silver-chain-with-moonstone-full" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#F6F8F9"/>
+      <stop offset="100%" stop-color="#E2E8EC"/>
+    </radialGradient>
+    <linearGradient id="metal-silver-chain-with-moonstone-full" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FDFEFE"/>
+      <stop offset="42%" stop-color="#BEC7CE"/>
+      <stop offset="100%" stop-color="#7E8B95"/>
+    </linearGradient>
+    <linearGradient id="stone-silver-chain-with-moonstone-full" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3F9"/>
+      <stop offset="100%" stop-color="#AFC6D8"/>
+    </linearGradient>
+    <radialGradient id="shadow-silver-chain-with-moonstone-full" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7E8B95" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7E8B95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-silver-chain-with-moonstone-full)"/>
+  <g>
+  <ellipse cx="500" cy="860" rx="230" ry="39" fill="url(#shadow-silver-chain-with-moonstone-full)"/>
+  <path d="M 268 215 Q 500 640 732 215" fill="none" stroke="url(#metal-silver-chain-with-moonstone-full)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 268 215 Q 500 640 732 215" fill="none" stroke="#FDFEFE" stroke-opacity="0.55"
+        stroke-width="13" stroke-dasharray="3 20" stroke-linecap="round"/>
+  <circle cx="500" cy="548" r="34" fill="none" stroke="url(#metal-silver-chain-with-moonstone-full)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 582 L 614 700 L 500 818 L 386 700 Z" fill="url(#metal-silver-chain-with-moonstone-full)"
+        stroke="#FDFEFE" stroke-opacity="0.5" stroke-width="4"/>
+  
+    <g>
+      <circle cx="500" cy="700" r="54" fill="url(#stone-silver-chain-with-moonstone-full)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="483.8" cy="681.1" rx="17.28" ry="11.88" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+</svg>

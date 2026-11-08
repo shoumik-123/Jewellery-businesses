@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# env
+.env
+.env.*
+!.env.example
+
+# build output
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# test / coverage
+coverage/
+playwright-report/
+test-results/
+
+# prisma
+prisma/*.db
+prisma/*.db-journal
+
+# Generated Prisma client: rebuilt from schema.prisma by `pnpm db:generate`,
+# which CI runs before lint, typecheck and build. Committing it would add
+# thousands of lines of noise to every schema change.
+packages/db/src/generated/
+
+# Next.js generated files: rebuilt by `next dev` / `next build`.
+apps/web/next-env.d.ts
+apps/web/AGENTS.md
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# editor / os
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# misc
+.turbo/
+.vercel/

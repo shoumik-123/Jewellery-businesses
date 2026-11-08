@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="A white gold solitaire engagement ring with a raised diamond">
+  <title>A white gold solitaire engagement ring with a raised diamond</title>
+  <defs>
+    <radialGradient id="bg-diamond-solitaire-engagement-ring-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#F7F9FB"/>
+      <stop offset="100%" stop-color="#E4EAEF"/>
+    </radialGradient>
+    <linearGradient id="metal-diamond-solitaire-engagement-ring-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="42%" stop-color="#C9D2D9"/>
+      <stop offset="100%" stop-color="#8C98A2"/>
+    </linearGradient>
+    <linearGradient id="stone-diamond-solitaire-engagement-ring-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCEBF5"/>
+    </linearGradient>
+    <radialGradient id="shadow-diamond-solitaire-engagement-ring-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8C98A2" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8C98A2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-diamond-solitaire-engagement-ring-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="800" rx="230" ry="39" fill="url(#shadow-diamond-solitaire-engagement-ring-detail)"/>
+  <circle cx="500" cy="590" r="205" fill="none" stroke="url(#metal-diamond-solitaire-engagement-ring-detail)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 355 448 A 205 205 0 0 1 470 388" fill="none" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 452 400 L 470 350 M 548 400 L 530 350" fill="none" stroke="url(#metal-diamond-solitaire-engagement-ring-detail)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+    <g>
+      <polygon points="408,285.8 454,226 546,226 592,285.8 500,423.8"
+               fill="url(#stone-diamond-solitaire-engagement-ring-detail)" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="3"/>
+      <polygon points="454,226 546,226 500,285.8"
+               fill="#FFFFFF" fill-opacity="0.45"/>
+      <polygon points="408,285.8 500,285.8 500,423.8"
+               fill="#000000" fill-opacity="0.06"/>
+    </g>
+  </g>
+</svg>

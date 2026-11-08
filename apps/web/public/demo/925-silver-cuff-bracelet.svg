@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="An open 925 silver cuff bracelet with rounded terminals">
+  <title>An open 925 silver cuff bracelet with rounded terminals</title>
+  <defs>
+    <radialGradient id="bg-925-silver-cuff-bracelet-full" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#F6F8F9"/>
+      <stop offset="100%" stop-color="#E2E8EC"/>
+    </radialGradient>
+    <linearGradient id="metal-925-silver-cuff-bracelet-full" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FDFEFE"/>
+      <stop offset="42%" stop-color="#BEC7CE"/>
+      <stop offset="100%" stop-color="#7E8B95"/>
+    </linearGradient>
+    <linearGradient id="stone-925-silver-cuff-bracelet-full" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3F9"/>
+      <stop offset="100%" stop-color="#AFC6D8"/>
+    </linearGradient>
+    <radialGradient id="shadow-925-silver-cuff-bracelet-full" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7E8B95" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7E8B95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-925-silver-cuff-bracelet-full)"/>
+  <g>
+  <ellipse cx="500" cy="820" rx="270" ry="46" fill="url(#shadow-925-silver-cuff-bracelet-full)"/>
+  <path d="M 742 620 A 275 275 0 1 0 630 745" fill="none" stroke="url(#metal-925-silver-cuff-bracelet-full)" stroke-width="78" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 300 330 A 275 275 0 0 1 455 232" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="742" cy="620" r="30" fill="url(#metal-925-silver-cuff-bracelet-full)"/>
+  <circle cx="630" cy="745" r="30" fill="url(#metal-925-silver-cuff-bracelet-full)"/>
+  </g>
+</svg>

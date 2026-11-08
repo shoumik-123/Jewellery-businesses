@@ -1,0 +1,55 @@
+# Local development dependencies.
+#
+# A real PostgreSQL server is the recommended local database: it is the only
+# way to exercise row-level security with genuine role separation, exactly as
+# production does. If Docker is unavailable, `pnpm db:up` starts a WASM
+# Postgres (PGlite) instead — good enough for schema and feature work, but it
+# authenticates every connection as superuser, so the transaction helper's
+# `SET LOCAL ROLE` is what keeps RLS enforced there. See docs/03-multi-tenancy.md.
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: jh-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: jewelleryhub
+    ports:
+      - '5432:5432'
+    volumes:
+      - jh-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d jewelleryhub']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: jh-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - '6379:6379'
+    volumes:
+      - jh-redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: jh-mailpit
+    restart: unless-stopped
+    ports:
+      - '1025:1025' # SMTP
+      - '8025:8025' # web UI
+    environment:
+      MP_MAX_MESSAGES: 500
+
+volumes:
+  jh-pgdata:
+  jh-redisdata:

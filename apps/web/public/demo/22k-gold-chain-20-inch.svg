@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="A 20 inch 22K gold link chain laid in a curve">
+  <title>A 20 inch 22K gold link chain laid in a curve</title>
+  <defs>
+    <radialGradient id="bg-22k-gold-chain-20-inch-full" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-22k-gold-chain-20-inch-full" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-22k-gold-chain-20-inch-full" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-22k-gold-chain-20-inch-full" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-22k-gold-chain-20-inch-full)"/>
+  <g><ellipse cx="500" cy="830" rx="300" ry="51" fill="url(#shadow-22k-gold-chain-20-inch-full)"/><ellipse cx="160" cy="420" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 160 420)"/><ellipse cx="228" cy="488" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(22 228 488)"/><ellipse cx="296" cy="549" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 296 549)"/><ellipse cx="364" cy="598" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(22 364 598)"/><ellipse cx="432" cy="629" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 432 629)"/><ellipse cx="500" cy="640" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(22 500 640)"/><ellipse cx="568" cy="629" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 568 629)"/><ellipse cx="636" cy="598" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(22 636 598)"/><ellipse cx="704" cy="549" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 704 549)"/><ellipse cx="772" cy="488" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(22 772 488)"/><ellipse cx="840" cy="420" rx="52" ry="33" fill="none" stroke="url(#metal-22k-gold-chain-20-inch-full)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"
+         transform="rotate(-22 840 420)"/>
+  </g>
+</svg>

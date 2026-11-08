@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+/*
+ * Storefront design tokens.
+ *
+ * Deliberately not a generic SaaS palette: a jewellery shop is judged on how
+ * the merchandise looks, so the chrome stays warm, quiet and low-contrast and
+ * lets the product sit forward. Gold is reserved for emphasis - prices,
+ * hallmarks, the primary action - and never used as a background wash.
+ *
+ * Every colour is a token here so the per-store theming in Phase 7 can
+ * override them from StoreTheme.tokens without touching a component.
+ */
+@theme {
+  --color-ink: #1c1917;
+  --color-ink-soft: #57534e;
+  --color-ink-faint: #a8a29e;
+
+  --color-parchment: #fbf9f6;
+  --color-parchment-deep: #f3efe9;
+  --color-line: #e7e1d8;
+
+  --color-gold: #b08d57;
+  --color-gold-deep: #8a6d3f;
+  --color-gold-wash: #f7f1e6;
+
+  --color-silver: #8b949e;
+  --color-silver-wash: #f1f3f5;
+
+  --font-display:
+    'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-card: 2px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-parchment);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'kern', 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* Visible focus everywhere, including for keyboard users on dark panels. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-deep);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Letter-spaced small caps used for eyebrows and metadata labels. */
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+
+  /* Tabular figures so prices and weights line up in a column. */
+  .numeric {
+    font-variant-numeric: tabular-nums;
+  }
+}

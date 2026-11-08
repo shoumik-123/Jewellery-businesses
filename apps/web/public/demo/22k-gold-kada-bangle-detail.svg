@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="A broad 22K gold kada bangle with a patterned band">
+  <title>A broad 22K gold kada bangle with a patterned band</title>
+  <defs>
+    <radialGradient id="bg-22k-gold-kada-bangle-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-22k-gold-kada-bangle-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-22k-gold-kada-bangle-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-22k-gold-kada-bangle-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-22k-gold-kada-bangle-detail)"/>
+  <g transform="rotate(-9 500 500)">
+  <ellipse cx="500" cy="830" rx="290" ry="49" fill="url(#shadow-22k-gold-kada-bangle-detail)"/>
+  <circle cx="500" cy="500" r="290" fill="none" stroke="url(#metal-22k-gold-kada-bangle-detail)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="500" r="290" fill="none" stroke="#9A763A" stroke-opacity="0.35"
+          stroke-width="72" stroke-dasharray="6 46" stroke-linecap="round"/>
+  <path d="M 294 294 A 290 290 0 0 1 452 213" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="500" cy="500" r="252" fill="none" stroke="#FBEFD2" stroke-opacity="0.5" stroke-width="3"/>
+  <circle cx="500" cy="500" r="328" fill="none" stroke="#9A763A" stroke-opacity="0.3" stroke-width="3"/>
+  </g>
+</svg>

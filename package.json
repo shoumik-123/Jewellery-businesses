@@ -1,0 +1,83 @@
+{
+  "name": "jewelleryhub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-tenant jewellery e-commerce SaaS platform",
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "turbo run dev --filter=@jh/api",
+    "dev:web": "turbo run dev --filter=@jh/web",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:integration": "turbo run test:integration",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,yaml,yml}\"",
+    "clean": "turbo run clean && rimraf node_modules",
+    "db:up": "prisma dev -d -n jewelleryhub",
+    "db:down": "prisma dev stop jewelleryhub",
+    "db:status": "prisma dev ls",
+    "db:destroy": "prisma dev rm jewelleryhub --force",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:reset": "prisma migrate reset --force",
+    "db:studio": "prisma studio",
+    "db:seed": "tsx prisma/seed.ts",
+    "media:generate": "tsx scripts/generate-demo-media.ts",
+    "db:rls": "tsx prisma/rls/generate.ts",
+    "db:verify-rls": "tsx prisma/rls/verify.ts",
+    "setup": "pnpm install && pnpm db:generate",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "@jh/config": "workspace:*",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "dotenv": "^18.0.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "pg": "^8.23.1",
+    "prettier": "^3.9.10",
+    "prisma": "^7.10.1",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.23.15",
+    "turbo": "^2.11.10",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": "*.prisma",
+        "options": {
+          "printWidth": 120
+        }
+      }
+    ]
+  }
+}

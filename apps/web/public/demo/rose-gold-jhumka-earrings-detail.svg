@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 160 680 680" width="1000" height="1000" role="img" aria-label="A pair of rose gold jhumka earrings with bell domes and dangling beads">
+  <title>A pair of rose gold jhumka earrings with bell domes and dangling beads</title>
+  <defs>
+    <radialGradient id="bg-rose-gold-jhumka-earrings-detail" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FDF2EE"/>
+      <stop offset="100%" stop-color="#F2DAD2"/>
+    </radialGradient>
+    <linearGradient id="metal-rose-gold-jhumka-earrings-detail" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBE2D8"/>
+      <stop offset="42%" stop-color="#D59A89"/>
+      <stop offset="100%" stop-color="#A3675A"/>
+    </linearGradient>
+    <linearGradient id="stone-rose-gold-jhumka-earrings-detail" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#C98FA9"/>
+      <stop offset="100%" stop-color="#8E4B6B"/>
+    </linearGradient>
+    <radialGradient id="shadow-rose-gold-jhumka-earrings-detail" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A3675A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#A3675A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-rose-gold-jhumka-earrings-detail)"/>
+  <g transform="rotate(-9 500 500)"><ellipse cx="500" cy="860" rx="290" ry="49" fill="url(#shadow-rose-gold-jhumka-earrings-detail)"/>
+    <g>
+      <circle cx="318" cy="242" r="40" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      
+    <g>
+      <circle cx="318" cy="330" r="32" fill="url(#stone-rose-gold-jhumka-earrings-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="308.4" cy="318.8" rx="10.24" ry="7.04" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+      <path d="M 200 560 Q 318 376 436 560 Z" fill="url(#metal-rose-gold-jhumka-earrings-detail)"
+            stroke="#FBE2D8" stroke-opacity="0.45" stroke-width="4"/>
+      <path d="M 200 560 L 436 560" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <g><path d="M 226 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="226" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 262 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="262" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 299 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="299" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 337 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="337" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 374 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="374" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 410 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="410" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g>
+    </g>
+    <g>
+      <circle cx="682" cy="242" r="40" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      
+    <g>
+      <circle cx="682" cy="330" r="32" fill="url(#stone-rose-gold-jhumka-earrings-detail)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="672.4" cy="318.8" rx="10.24" ry="7.04" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+      <path d="M 564 560 Q 682 376 800 560 Z" fill="url(#metal-rose-gold-jhumka-earrings-detail)"
+            stroke="#FBE2D8" stroke-opacity="0.45" stroke-width="4"/>
+      <path d="M 564 560 L 800 560" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <g><path d="M 590 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="590" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 626 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="626" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 663 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="663" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 701 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="701" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 738 566 l 0 34" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="738" cy="608" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g><g><path d="M 774 566 l 0 52" fill="none" stroke="url(#metal-rose-gold-jhumka-earrings-detail)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="774" cy="626" r="15" fill="url(#metal-rose-gold-jhumka-earrings-detail)"/></g>
+    </g>
+  </g>
+</svg>

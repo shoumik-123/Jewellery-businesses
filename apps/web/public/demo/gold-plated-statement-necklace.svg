@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="A gold plated statement necklace with a central faceted stone">
+  <title>A gold plated statement necklace with a central faceted stone</title>
+  <defs>
+    <radialGradient id="bg-gold-plated-statement-necklace-full" cx="50%" cy="38%" r="78%">
+      <stop offset="0%" stop-color="#FCF6EA"/>
+      <stop offset="100%" stop-color="#F0E2C4"/>
+    </radialGradient>
+    <linearGradient id="metal-gold-plated-statement-necklace-full" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FBEFD2"/>
+      <stop offset="42%" stop-color="#D7AF62"/>
+      <stop offset="100%" stop-color="#9A763A"/>
+    </linearGradient>
+    <linearGradient id="stone-gold-plated-statement-necklace-full" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#E8807F"/>
+      <stop offset="100%" stop-color="#B33A3A"/>
+    </linearGradient>
+    <radialGradient id="shadow-gold-plated-statement-necklace-full" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9A763A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#9A763A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="1000" fill="url(#bg-gold-plated-statement-necklace-full)"/>
+  <g>
+  <ellipse cx="500" cy="860" rx="300" ry="51" fill="url(#shadow-gold-plated-statement-necklace-full)"/>
+  <path d="M 215 250 Q 500 820 785 250" fill="none" stroke="url(#metal-gold-plated-statement-necklace-full)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 215 250 Q 500 820 785 250" fill="none" stroke="#FBEFD2" stroke-opacity="0.6"
+        stroke-width="15" stroke-dasharray="3 22" stroke-linecap="round"/>
+  <path d="M 268 400 Q 500 860 732 400" fill="none" stroke="url(#metal-gold-plated-statement-necklace-full)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  
+    <g>
+      <polygon points="426,664.1 463,616 537,616 574,664.1 500,775.1"
+               fill="url(#stone-gold-plated-statement-necklace-full)" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="3"/>
+      <polygon points="463,616 537,616 500,664.1"
+               fill="#FFFFFF" fill-opacity="0.45"/>
+      <polygon points="426,664.1 500,664.1 500,775.1"
+               fill="#000000" fill-opacity="0.06"/>
+    </g>
+  
+    <g>
+      <circle cx="392" cy="626" r="24" fill="url(#stone-gold-plated-statement-necklace-full)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="384.8" cy="617.6" rx="7.68" ry="5.28" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  
+    <g>
+      <circle cx="608" cy="626" r="24" fill="url(#stone-gold-plated-statement-necklace-full)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+      <ellipse cx="600.8" cy="617.6" rx="7.68" ry="5.28" fill="#FFFFFF" fill-opacity="0.6"/>
+    </g>
+  </g>
+</svg>
