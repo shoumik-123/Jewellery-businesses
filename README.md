@@ -118,6 +118,7 @@ Not claims — commands you can run:
 | 10  | [docs/09-testing-strategy.md](docs/09-testing-strategy.md)                          | Test pyramid, the generated cross-tenant isolation suite, per-path coverage targets, CI gates, definition of done                                     |
 | 11  | [docs/10-deployment.md](docs/10-deployment.md)                                      | Topology, hosting recommendation with costs, environments, zero-downtime migrations, custom domains, scaling, DR, alerting                            |
 | 12  | [docs/11-env-reference.md](docs/11-env-reference.md) + [.env.example](.env.example) | Every configuration variable, validated at boot                                                                                                       |
+| 13  | [docs/12-deploy-vercel.md](docs/12-deploy-vercel.md)                                | Step-by-step Vercel deployment: two projects, Neon Postgres, the exact environment variables, and what does not work on a `.vercel.app` domain        |
 
 Suggested reading order if you only read three: the multi-tenancy document,
 the data model, then the roadmap.
